@@ -80,7 +80,7 @@ In the Elixir cell below, create a string `"Hello, world!"`. This is a rite of p
 programmer.
 
 ```elixir
-
+"Hello, world!"
 ```
 
 ## Multiline Strings
@@ -98,8 +98,8 @@ To make defining multiline strings easier, Elixir allows us to use three quotes 
 ```elixir
 string = """
 line 1
-line 1
-line 1
+line 2
+line 3
 """
 
 IO.puts(string)
@@ -141,7 +141,7 @@ Replace `nil` with your answer.
 </details>
 
 ```elixir
-
+"Hi " <> "James."
 ```
 
 ### String Interpolation
@@ -181,7 +181,7 @@ In the Elixir cell below, use **string interpolation** to say `I have #{X - 1} c
 </details>
 
 ```elixir
-answer = nil
+"I have #{10 - 1} classmates."
 ```
 
 ## Escaping Characters
