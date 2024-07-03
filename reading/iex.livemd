@@ -98,6 +98,9 @@ Run [IO.gets/2](https://hexdocs.pm/elixir/IO.html#gets/2) in the command line fr
 
 ```elixir
 iex> input = IO.gets("Give me some input: ")
+# Resul
+Give me some input: sure!
+"sure!\n"
 ```
 
 ## Multiline Expressions
