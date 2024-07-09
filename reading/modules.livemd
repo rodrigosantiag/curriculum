@@ -120,7 +120,7 @@ end
 Call the `MutliParamExample.call/3` function with different arguments.
 
 ```elixir
-
+MultiParamExample.call("argument 1", 2, "param 3")
 ```
 
 ## Internal Module Functions
@@ -318,7 +318,13 @@ end
 Enter your solution below.
 
 ```elixir
+defmodule Languages.Portuguese do
+  def greeting do
+    "Olá"
+  end
+end
 
+Languages.Portuguese.greeting()
 ```
 
 ### Nested Modules
@@ -357,8 +363,8 @@ We use the `@` symbol to define a compile-time module attribute.
 
 ```elixir
 defmodule Hero do
-  @name "Spider-Man"
-  @nemesis "Green Goblin"
+  @name "Batman"
+  @nemesis "Joker"
 
   def introduce do
     "Hello, my name is #{@name}!"
@@ -516,7 +522,33 @@ end
 </details>
 
 ```elixir
+defmodule Math do
+  @moduledoc """
+  Module to perform basic arithmetic operations (currently it only has add operation)
+  """
 
+  @doc """
+  Performs add operation for numbers passed as arguments
+
+  ## Examples
+
+  iex> Math.add(2, 5)
+  7
+
+  iex> Math.add(1, 2, 3)
+  6
+  """
+  def add(number1, number2) do
+    number1 + number2
+  end
+
+  def add(number1, number2, number3) do
+    number1 + number2 + number3
+  end
+end
+
+IO.inspect(Math.add(2, 5)) # 7
+Math.add(1, 2, 3) # 6
 ```
 
 ## Default Arguments
@@ -583,7 +615,14 @@ Greeting.hello("Andrew")
 ```
 
 ```elixir
+defmodule Greeting do
+  def hello(name \\ "Rodrigo") do
+    "Hello #{name}!"
+  end
+end
 
+IO.inspect(Greeting.hello())
+Greeting.hello("Jorge")
 ```
 
 ## Documentation
@@ -665,7 +704,7 @@ defmodule DoctestFailure do
   ## Examples
 
     iex> DoctestFailure.test()
-    "expected return value"
+    "actual return value"
   """
   def test do
     "actual return value"
@@ -696,7 +735,7 @@ If this is the case, you either have to fix your code, or remove/comment the cra
 Uncomment the following code and evaluate the cell to see an example. Re-comment your code to avoid crashing the livebook as you continue with the lesson.
 
 ```elixir
-# defmodule DoctestCrash Do
+# defmodule DoctestCrash do
 # @moduledoc """
 # DoctestCrash
 
