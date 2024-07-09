@@ -266,8 +266,8 @@ defmodule Hero do
   @enforce_keys [:name, :secret_identity]
   defstruct @enforce_keys
 
-  def greeting(hero) do
-    "I am #{hero.name}."
+  def greeting(%Hero{name: name} = _hero) do
+    "I am #{name}."
   end
 
   def reveal(hero) do
