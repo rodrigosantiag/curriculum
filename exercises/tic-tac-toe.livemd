@@ -162,6 +162,9 @@ defmodule TicTacToe do
       "A"
   """
   def at(board, coordinate) do
+    {x, y} = coordinate
+
+    board |> Enum.at(2 - y) |> Enum.at(x)
   end
 
   @doc """
@@ -180,6 +183,75 @@ defmodule TicTacToe do
       [[nil, nil, nil], [nil, "O", nil], [nil, nil, nil]]
   """
   def fill(board, coordinate, symbol) do
+    {x, y} = coordinate
+
+    List.update_at(board, 2 - y, &List.replace_at(&1, x,symbol))
+  end
+
+  @doc """
+  Determine if a player has won the game.
+  
+  ## Examples
+  
+    Row Wins:
+  
+    iex> TicTacToe.winner([["X", "X", "X"], [nil, nil, nil], [nil, nil, nil]])
+    "X"
+    iex> TicTacToe.winner([[nil, nil, nil], ["X", "X", "X"], [nil, nil, nil]])
+    "X"
+    iex> TicTacToe.winner([[nil, nil, nil], [nil, nil, nil], ["X", "X", "X"]])
+    "X"
+  
+    Column Wins:
+  
+    iex> TicTacToe.winner([["X", nil, nil], ["X", nil, nil], ["X", nil, nil]])
+    "X"
+    iex> TicTacToe.winner([[nil, "X", nil], [nil, "X", nil], [nil, "X", nil]])
+    "X"
+    iex> TicTacToe.winner([[nil, nil, "X"], [nil, nil, "X"], [nil, nil, "X"]])
+    "X"
+  
+    Diagonal Wins
+  
+    iex> TicTacToe.winner([["X", nil, nil], [nil, "X", nil], [nil, nil, "X"]])
+    "X"
+    iex> TicTacToe.winner([[nil, nil, "X"], [nil, "X", nil], ["X", nil, nil]])
+    "X"
+  
+    No Winner
+  
+    iex> TicTacToe.winner([[nil, nil, nil], [nil, nil, nil], [nil, nil, nil]])
+    nil
+    iex> TicTacToe.winner([[nil, "X", nil], [nil, "X", nil], [nil, nil, nil]])
+    nil
+  
+  """
+  def winner(board) do
+    cond do
+      winner?(board, "X") -> "X"
+      winner?(board, "O") -> "O"
+      true -> nil
+    end
+  end
+
+  defp winner?(board, symbol) do
+    row_winner = 
+      Enum.any?(board, fn row -> 
+        Enum.all?(row, fn item -> item == symbol end)  
+      end)
+
+    column_winner = 
+      Enum.zip_with(board, fn [x, y, z] -> [x, y, z] end)
+      |> Enum.any?(fn row -> 
+        Enum.all?(row, fn item -> item == symbol end) 
+      end)
+
+    
+    diagonal_winner = 
+      match?([[^symbol, _, _], [_, ^symbol, _], [_, _, ^symbol]], board) or 
+        match?([[_, _, ^symbol], [_, ^symbol, _], [^symbol, _, _]], board)
+
+    row_winner or column_winner or diagonal_winner
   end
 end
 ```
