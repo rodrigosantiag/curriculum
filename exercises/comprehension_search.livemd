@@ -126,11 +126,28 @@ end
 ```elixir
 defmodule Products do
   def all_items do
+    for name <- ["computer", "phone", "tablet"], price <- 1..100 do
+      %{name: name, price: price}
+    end
   end
 
   def search(items, filters) do
+    name = Keyword.get(filters, :name)
+    min_price = Keyword.get(filters, :min)
+    max_price = Keyword.get(filters, :max)
+
+    for item <- items,
+      !name || item.name == name,
+      !min_price || item.price >= min_price,
+      !max_price || item.price <= max_price do
+      item
+    end
   end
 end
+
+all_items = Products.all_items()
+IO.inspect(all_items)
+Products.search(all_items, [min: 10, max: 15, name: "tablet"])
 ```
 
 ## Commit Your Progress
