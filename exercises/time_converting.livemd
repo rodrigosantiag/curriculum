@@ -71,6 +71,11 @@ defmodule TimeConverter do
   Documentation for `TimeConverter`
   """
 
+  @second 1
+  @minute 60
+  @hour 60
+  @day 24
+
   @doc """
   Convert a unit of time to a number of seconds.
 
@@ -90,6 +95,12 @@ defmodule TimeConverter do
 
   """
   def to_seconds(amount, unit) do
+    case unit do
+      :seconds -> amount * @second
+      :minutes -> amount * @second * @minute
+      :hours -> amount * @second * @minute * @hour
+      :days -> amount * @second * @minute * @hour * @day
+    end
   end
 
   @doc """
@@ -112,6 +123,12 @@ defmodule TimeConverter do
 
   """
   def from_seconds(amount, unit) do
+    case unit do
+      :seconds -> amount / @second
+      :minutes -> amount / @second / @minute
+      :hours -> amount / @second / @minute / @hour
+      :days -> amount / @second / @minute / @hour / @day
+    end
   end
 end
 ```
