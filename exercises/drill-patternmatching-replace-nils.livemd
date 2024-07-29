@@ -71,7 +71,26 @@ defmodule Replace do
   iex> Replace.nils([nil, nil, nil, nil, "5"], [1, 2, 3, 4, 5])
   [1, 2, 3, 4, "5"]
   """
+  # My implmentation
+  # def nils(list1, list2) do
+  #   list1
+  #   |> Enum.map_reduce(0, fn item, acc -> 
+  #     case item do
+  #       nil -> 
+  #         {Enum.at(list2, acc), acc + 1}
+
+  #       _ -> 
+  #         {item, acc + 1}
+  #     end
+  #   end)
+  #   |> elem(0)
+  # end
   def nils(list1, list2) do
+    Enum.zip(list1, list2)
+    |> Enum.map(fn
+      {nil, value} -> value
+      {value, _} -> value
+    end)
   end
 end
 ```
