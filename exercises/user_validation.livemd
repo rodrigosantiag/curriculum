@@ -67,10 +67,10 @@ defmodule User do
   def validate_users(users) do
     Enum.map(users, fn user ->
       with %User{name: name} <- user,
-        true <- is_bitstring(name) do
+        {:name_check, true} <- {:name_check, is_bitstring(name)} do
         {:ok, user}
       else
-        false -> {:error, :missing_name}
+        {:name_check, false} -> {:error, :missing_name}
         _ -> {:error, :not_a_user}
       end
     end)
