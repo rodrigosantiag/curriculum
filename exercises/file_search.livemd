@@ -94,6 +94,15 @@ defmodule FileSearch do
   ["file1.txt", "file2.txt", "file3.txt", "file4.txt"]
   """
   def all(folder) do
+    files = Path.wildcard("#{folder}/**/*")
+
+    Enum.filter(files, fn file ->
+      !File.dir?(file)
+    end)
+    |> Enum.map(fn file ->
+      String.split(file, "/", trim: true) |> List.last()
+    end)
+    |> Enum.sort()
   end
 
   @doc """
@@ -112,7 +121,7 @@ defmodule FileSearch do
       file3.jpg
     file4.txt
 
-  The exact order and return value are up to you as long as it finds all files 
+  The exact order and return value are up to you as long as it finds all files
   and categorizes them by file extension.
 
   For example, it might return the following:
@@ -124,6 +133,13 @@ defmodule FileSearch do
   }
   """
   def by_extension(folder) do
+    all(folder)
+    |> Enum.group_by(fn file ->
+      case Path.extname(file) do
+        "" -> ".no_extension"
+        ext -> ext
+      end
+    end)
   end
 end
 ```
