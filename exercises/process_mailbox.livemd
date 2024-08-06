@@ -139,6 +139,22 @@ defmodule Mailbox do
       "Hello!"
   """
   def loop(state \\ []) do
+    receive do
+      {:send, message} -> 
+        IO.inspect(message)
+        loop([message] ++ state)
+        
+      {:read, pid} -> 
+        case state do
+          [head | tail] ->
+            send(pid, head)
+            loop(tail)
+
+          [] ->
+            send(pid, :empty)
+            loop()
+        end
+    end
   end
 end
 ```
