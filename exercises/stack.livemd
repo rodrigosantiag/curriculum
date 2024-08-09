@@ -54,6 +54,10 @@ In addition to the above, add documentation and at least one doctest for the `pu
 
 <!-- livebook:{"break_markdown":true} -->
 
+GitHub repo: https://github.com/rodrigosantiag/elixir-stack-genserver
+
+<!-- livebook:{"break_markdown":true} -->
+
 ### Pair Testing
 
 This will be a **pair testing** exercise Using TDD (Test Driven Development). We recommend using Visual Studio Code LiveShare to collaborate.
