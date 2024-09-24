@@ -158,7 +158,7 @@ defmodule Blog.Repo.Migrations.AddPostsTagsJoinTable do
         add :tag_id, references(:tags, on_delete: :delete_all)
       end
 
-      create(unique_index(:post_tags, [:post_id, :tag_id]))
+      create(unique_index(:posts_tags, [:post_id, :tag_id]))
   end
 end
 ```
