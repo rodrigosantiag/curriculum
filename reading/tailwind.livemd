@@ -86,7 +86,7 @@ To experiment with Tailwind, we can use the Tailwind CDN (Content Delivery Netwo
 
 We've also created a [Livebook Tailwind Playground](https://github.com/BrooklinJazz/kino_tailwind_playground) for the purposes of demonstration. All tailwind examples are editable and render live.
 
-<!-- livebook:{"attrs":"eyJodG1sIjoiPGRpdiBjbGFzcz1cImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIGgtc2NyZWVuIHctZnVsbCBiZy1ncmVlbi0yMDBcIj5cbiAgPGgxIGNsYXNzPVwidGV4dC0zeGwgZm9udC1ib2xkIHVuZGVybGluZSB0ZXh0LWNlbnRlclwiPlxuICAgIEdvIEFoZWFkIEFuZCBDaGFuZ2UgVGhpcyBUZXh0IVxuICA8L2gxPlxuPC9kaXY+In0","chunks":null,"kind":"Elixir.Kino.TailwindPlayground","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":"eyJodG1sIjoiPGRpdiBjbGFzcz1cImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIGgtc2NyZWVuIHctZnVsbCBiZy1ncmVlbi0yMDBcIj5cbiAgPGgxIGNsYXNzPVwidGV4dC0zeGwgZm9udC1ib2xkIHVuZGVybGluZSB0ZXh0LWNlbnRlclwiPlxuICAgIEdvIEFoZWFkIEFuZCBDaGFuZ2UgVGhpcyBUZXh0ISAoQ2hhbmdlZClcbiAgPC9oMT5cbjwvZGl2PiJ9","chunks":null,"kind":"Elixir.Kino.TailwindPlayground","livebook_object":"smart_cell"} -->
 
 ```elixir
 Kino.nothing()
@@ -144,7 +144,7 @@ Use the [Tailwind Documentation](https://tailwindcss.com/docs/installation) to c
 
 ![](images/tailwind_button_example.png)
 
-<!-- livebook:{"attrs":"eyJodG1sIjoiPGJ1dHRvbiBjbGFzcz1cIlwiPkNsaWNrIE1lITwvYnV0dG9uPiJ9","chunks":null,"kind":"Elixir.Kino.TailwindPlayground","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":"eyJodG1sIjoiPGJ1dHRvbiBjbGFzcz1cInB4LTQgcHktMSB0ZXh0LXNtIHRleHQtcHVycGxlLTYwMCBmb250LXNlbWlib2xkIHJvdW5kZWQtZnVsbCBib3JkZXIgYm9yZGVyLXB1cnBsZS0yMDAgaG92ZXI6dGV4dC13aGl0ZSBob3ZlcjpiZy1wdXJwbGUtNjAwIGhvdmVyOmJvcmRlci10cmFuc3BhcmVudCBmb2N1czpvdXRsaW5lLW5vbmUgZm9jdXM6cmluZy0yIGZvY3VzOnJpbmctcHVycGxlLTYwMCBmb2N1czpyaW5nLW9mZnNldC0yXCI+Q2xpY2sgTWUhPC9idXR0b24+In0","chunks":null,"kind":"Elixir.Kino.TailwindPlayground","livebook_object":"smart_cell"} -->
 
 ```elixir
 Kino.nothing()
@@ -299,7 +299,7 @@ Create a paragraph tag that will wrap text on a new line when wider than 10rem.
 For example, this paragraph will wrap words when the text is wider than 10rem.<p>
 </p>
 
-<!-- livebook:{"attrs":"e30","chunks":null,"kind":"Elixir.Kino.TailwindPlayground","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":"eyJodG1sIjoiPHAgY2xhc3M9XCJtYXgtdy00MFwiPkZvciBleGFtcGxlLCB0aGlzIHBhcmFncmFwaCB3aWxsIHdyYXAgd29yZHMgd2hlbiB0aGUgdGV4dCBpcyB3aWRlciB0aGFuIDEwcmVtPC9wPiJ9","chunks":null,"kind":"Elixir.Kino.TailwindPlayground","livebook_object":"smart_cell"} -->
 
 ```elixir
 Kino.nothing()
@@ -324,7 +324,7 @@ Apply the `inline-block` on all of these span tags so that they can have height 
 
 Then change `inline-block` to `block` to see each span tag rendered on their own line.
 
-<!-- livebook:{"attrs":"eyJodG1sIjoiPHNwYW4gY2xhc3M9XCJoLTYgdy02IGJnLXJlZC00MDBcIj48L3NwYW4+XG48c3BhbiBjbGFzcz1cImgtNiB3LTYgYmctb3JhbmdlLTQwMFwiPjwvc3Bhbj5cbjxzcGFuIGNsYXNzPVwiaC02IHctNiBiZy15ZWxsb3ctNDAwXCI+PC9zcGFuPlxuPHNwYW4gY2xhc3M9XCJoLTYgdy02IGJnLWdyZWVuLTQwMFwiPjwvc3Bhbj5cbjxzcGFuIGNsYXNzPVwiaC02IHctNiBiZy1ibHVlLTQwMFwiPjwvc3Bhbj5cbjxzcGFuIGNsYXNzPVwiaC02IHctNiBiZy1wdXJwbGUtNDAwXCI+PC9zcGFuPiJ9","chunks":null,"kind":"Elixir.Kino.TailwindPlayground","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":"eyJodG1sIjoiPHNwYW4gY2xhc3M9XCJoLTYgdy02IGJnLXJlZC00MDAgYmxvY2tcIj48L3NwYW4+XG48c3BhbiBjbGFzcz1cImgtNiB3LTYgYmctb3JhbmdlLTQwMCBibG9ja1wiPjwvc3Bhbj5cbjxzcGFuIGNsYXNzPVwiaC02IHctNiBiZy15ZWxsb3ctNDAwIGJsb2NrXCI+PC9zcGFuPlxuPHNwYW4gY2xhc3M9XCJoLTYgdy02IGJnLWdyZWVuLTQwMCBibG9ja1wiPjwvc3Bhbj5cbjxzcGFuIGNsYXNzPVwiaC02IHctNiBiZy1ibHVlLTQwMCBibG9ja1wiPjwvc3Bhbj5cbjxzcGFuIGNsYXNzPVwiaC02IHctNiBiZy1wdXJwbGUtNDAwIGJsb2NrXCI+PC9zcGFuPiJ9","chunks":null,"kind":"Elixir.Kino.TailwindPlayground","livebook_object":"smart_cell"} -->
 
 ```elixir
 Kino.nothing()
@@ -387,7 +387,7 @@ Create a series of rainbow boxes in the center of the page. Each box should be `
 
 </details>
 
-<!-- livebook:{"attrs":"eyJodG1sIjoiIn0","chunks":null,"kind":"Elixir.Kino.TailwindPlayground","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":"eyJodG1sIjoiPGRpdiBjbGFzcz1cImJnLXJlZC00MDAgcC02IHctMy80IG14LWF1dG8gbXQtMTBcIj48L2Rpdj5cbjxkaXYgY2xhc3M9XCJiZy1vcmFuZ2UtNDAwIHAtNiB3LTMvNCBteC1hdXRvIG10LTEwXCI+PC9kaXY+XG48ZGl2IGNsYXNzPVwiYmcteWVsbG93LTQwMCBwLTYgdy0zLzQgbXgtYXV0byBtdC0xMFwiPjwvZGl2PlxuPGRpdiBjbGFzcz1cImJnLWdyZWVuLTQwMCBwLTYgdy0zLzQgbXgtYXV0byBtdC0xMFwiPjwvZGl2PlxuPGRpdiBjbGFzcz1cImJnLWJsdWUtNDAwIHAtNiB3LTMvNCBteC1hdXRvIG10LTEwXCI+PC9kaXY+XG48ZGl2IGNsYXNzPVwiYmctcHVycGxlLTQwMCBwLTYgdy0zLzQgbXgtYXV0byBtdC0xMFwiPjwvZGl2PiJ9","chunks":null,"kind":"Elixir.Kino.TailwindPlayground","livebook_object":"smart_cell"} -->
 
 ```elixir
 Kino.nothing()
@@ -495,7 +495,7 @@ Create a rounded rainbow using `border` styles and `padding`.
 
 </details>
 
-<!-- livebook:{"attrs":"eyJodG1sIjoiIn0","chunks":null,"kind":"Elixir.Kino.TailwindPlayground","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":"eyJodG1sIjoiPGRpdiBjbGFzcz1cImJvcmRlci00IGJvcmRlci1yZWQtNDAwIHJvdW5kZWQtZnVsbCBwLTIgbXQtMTAgbS0yXCI+XG4gIDxkaXYgY2xhc3M9XCJwLTIgYm9yZGVyLTQgYm9yZGVyLW9yYW5nZS00MDAgcm91bmRlZC1mdWxsXCI+XG4gICAgPGRpdiBjbGFzcz1cInAtMiBib3JkZXItNCBib3JkZXIteWVsbG93LTQwMCByb3VuZGVkLWZ1bGxcIj5cbiAgICAgIDxkaXYgY2xhc3M9XCJwLTIgYm9yZGVyLTQgYm9yZGVyLWdyZWVuLTQwMCByb3VuZGVkLWZ1bGxcIj5cbiAgICAgICAgPGRpdiBjbGFzcz1cInAtMiBib3JkZXItNCBib3JkZXItYmx1ZS00MDAgcm91bmRlZC1mdWxsXCI+XG4gICAgICAgICAgPGRpdiBjbGFzcz1cInAtMiBib3JkZXItNCBib3JkZXItcHVycGxlLTQwMCByb3VuZGVkLWZ1bGxcIj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICA8L2Rpdj5cbiAgPC9kaXY+XG48L2Rpdj4ifQ","chunks":null,"kind":"Elixir.Kino.TailwindPlayground","livebook_object":"smart_cell"} -->
 
 ```elixir
 Kino.nothing()
@@ -525,7 +525,7 @@ We can set the position value of an HTML element using `static` (default), `fixe
 
 Use `absolute` positioning to play a paragraph tag on the bottom-right corner of the display.
 
-<!-- livebook:{"attrs":"eyJodG1sIjoiIn0","chunks":null,"kind":"Elixir.Kino.TailwindPlayground","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":"eyJodG1sIjoiPHAgY2xhc3M9XCJhYnNvbHV0ZSBib3R0b20tMCByaWdodC0wXCI+U29tZSBjb250ZW50PC9wPiJ9","chunks":null,"kind":"Elixir.Kino.TailwindPlayground","livebook_object":"smart_cell"} -->
 
 ```elixir
 Kino.nothing()
@@ -555,7 +555,7 @@ See the [Hover, Focus, and Other States](https://tailwindcss.com/docs/hover-focu
 
 Make a button that changes styles on hover.
 
-<!-- livebook:{"attrs":"e30","chunks":null,"kind":"Elixir.Kino.TailwindPlayground","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":"eyJodG1sIjoiPGJ1dHRvbiBjbGFzcz1cImJvcmRlci00IHAtMSBiZy1ibHVlLTUwMCBob3ZlcjpiZy1ncmVlbi0zMDBcIj5DbGljayBtZSE8L2J1dHRvbj4ifQ","chunks":null,"kind":"Elixir.Kino.TailwindPlayground","livebook_object":"smart_cell"} -->
 
 ```elixir
 Kino.nothing()
@@ -576,7 +576,7 @@ Omitting the screen size applies the style on all screens (including those small
 
 Change the text size of a paragraph tag based on the screen size. Use the `xs`, `sm`, and `md` buttons in the playground to see the styles applied.
 
-<!-- livebook:{"attrs":"eyJodG1sIjoiPHAgY2xhc3M9XCJcIj5EeW5hbWljIFRleHQgU2l6ZTwvcD4ifQ","chunks":null,"kind":"Elixir.Kino.TailwindPlayground","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":"eyJodG1sIjoiPHAgY2xhc3M9XCJsZzp0ZXh0LTV4bCBtZDp0ZXh0LTR4bCBzbTp0ZXh0LTEweGxcIj5EeW5hbWljIFRleHQgU2l6ZTwvcD4ifQ","chunks":null,"kind":"Elixir.Kino.TailwindPlayground","livebook_object":"smart_cell"} -->
 
 ```elixir
 Kino.nothing()
